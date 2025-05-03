@@ -1,0 +1,217 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "ipfsHash",
+						"type": "string"
+					}
+				],
+				"name": "addRecord",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "doctor",
+						"type": "address"
+					}
+				],
+				"name": "checkAccess",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "doctor",
+						"type": "address"
+					}
+				],
+				"name": "grant",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isDoctor",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isPatient",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "registerAsDoctor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "registerAsPatient",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "doctor",
+						"type": "address"
+					}
+				],
+				"name": "revoke",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					}
+				],
+				"name": "viewRecords",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MedicalRecord.sol": "MedicalRecord"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MedicalRecord.sol": {
+			"keccak256": "0x772a126d802d62ded4321e2aacf7572df8edf8586ce648484d9b2667c522b20f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://804d5ca731ec8916b3441d01c9f1766cc9e824a6f4bb55af75117da6c6426a42",
+				"dweb:/ipfs/QmWvsAxma2p3cqmAM6jVGNeYjfKieoncRpoKQEGWuHL9fp"
+			]
+		},
+		"contracts/access/AccessControl.sol": {
+			"keccak256": "0xb98864f418e6f5c78477747da5bbbfa039622d87e4ded2f5d77e8ac3b84d1282",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3de1c34306293bf0be233d2625a144ae524bc8a6b3cb16e4e4c48e54c7210054",
+				"dweb:/ipfs/QmNnszZe6Awy412FNo2kwRcdUEAmVqZ93KmchhJt3KT6NR"
+			]
+		},
+		"contracts/interfaces/IMedicalRecord.sol": {
+			"keccak256": "0xefaa00d278533f96b05c0cedeb50d0728c72272aff613cd590343b92ad6129ba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1fa741c5939b4fced3becf35b0a33cff450e20da8fe221192e3705a644b398aa",
+				"dweb:/ipfs/QmNsBWMae5ihkj6GBiy4z6E2VdLogGUtn1K14awpG339iL"
+			]
+		},
+		"contracts/models/Structs.sol": {
+			"keccak256": "0x37de5113635218cc5558a197907285599251f8c0ddd88daa2b86e97ce19b4bc7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://37f57927a6ff56c51fb4ec82f59ce8692affb4de51982dfc9f91cf0e82ff597c",
+				"dweb:/ipfs/QmXvndiGVtszsKNj3XcXvCgBKafP52chRHVX74PzTjUBcu"
+			]
+		},
+		"contracts/users/UserRegistry.sol": {
+			"keccak256": "0xdce7dcd329b2ed460fe2e276e60830ec047e59923cf7fd374653a886f6fe2857",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aeb7b2082c1c75638ec03beea80cf1b466b7eeb82bdf7c3bdf54df7dce69da0c",
+				"dweb:/ipfs/QmQffkmJ5uRqQomm3bWBNCnhizkaSFwG6rKDrn4Cuh8o6n"
+			]
+		}
+	},
+	"version": 1
+}
