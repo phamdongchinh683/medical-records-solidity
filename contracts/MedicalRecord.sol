@@ -17,7 +17,7 @@ contract MedicalRecord is UserRegistry, AccessControl, IMedicalRecord {
     }
 
     function viewRecords(address patient) external view override returns (string[] memory, uint[] memory) {
-        require(checkAccess(patient, msg.sender), "Not access");
+        require(checkAccess(patient, msg.sender), "You do not have access");
 
         uint length = records[patient].length;
         string[] memory hashes = new string[](length);

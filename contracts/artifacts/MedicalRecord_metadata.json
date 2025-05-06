@@ -224,19 +224,19 @@
 	},
 	"sources": {
 		"contracts/MedicalRecord.sol": {
-			"keccak256": "0xbf80a2cd5c4275d8c6096c10b301c3c993b849dd8ff42bc211cb3a8f1c510575",
+			"keccak256": "0x8a5537a1c6a902ec74f6d7f5c4e9bd006b0d512baa272b1c820eab1de164e318",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dc3a2a7d8218d9ecb39810b4cc3cdbde87ef23766498be819d4d1d8492d12934",
-				"dweb:/ipfs/QmeCdRNt1n4r2CahfQHiLRiqzyAxuoZv4sEtaonTSzkwes"
+				"bzz-raw://1e470d700fa55971210aa37680c5a6535f5bbe959e2b647e46d968b674e5406b",
+				"dweb:/ipfs/QmXhXpKe8cRM44DF8MVcZ8zNLuioa4oNSnXLuK9c4XdmGA"
 			]
 		},
 		"contracts/access/AccessControl.sol": {
-			"keccak256": "0x9c25bf1882e3fe9e2a33df9966816a3f6c744e9933e2e234ba888cb82e9ccbc4",
+			"keccak256": "0xa68bf5e9280314935f1f099ced30a5cb31ef006a9f33075df1ab11b4a2cb064f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bff4d26dada070398ad20be70d855dc29fe5d311d9ca5df5d4cbd3a56c7ef405",
-				"dweb:/ipfs/QmRtTD5tu8AFwpbE3nCqihqAyZgPXRjVQE7rpNqRmDDKqN"
+				"bzz-raw://5db2c3591b4748a4db8f931298386b217762faec7b9a8502309e25bbe4714b71",
+				"dweb:/ipfs/QmWEFGENSvU62goxZJyFcY5ozMymdsTfqSnKvZxF6Ckeec"
 			]
 		},
 		"contracts/interfaces/IMedicalRecord.sol": {
