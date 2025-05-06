@@ -3,16 +3,31 @@ pragma solidity ^0.8.9;
 
 contract AccessControl {
     mapping(address => mapping(address => bool)) internal access;
+    mapping(address => address[]) private grantedDoctors;
+        
+
+    event AccessGranted(address indexed patient, address indexed doctor);
+    event AccessRevoked(address indexed patient, address indexed doctor);
 
     function grant(address doctor) public {
-        access[msg.sender][doctor] = true;
-    }
+        if(!access[msg.sender][doctor]){
+        access[msg.sender][doctor] = true; // access permission for doctor
+        grantedDoctors[msg.sender].push(doctor); // push in a array
+        emit AccessGranted(msg.sender, doctor); 
+        }
+
+    } // access permission for that doctor 
 
     function revoke(address doctor) public {
-        access[msg.sender][doctor] = false;
-    }
+        access[msg.sender][doctor] = false; 
+        emit AccessRevoked(msg.sender, doctor);
+    } // cancel permission for doctor
 
     function checkAccess(address patient, address doctor) public view returns (bool) {
         return access[patient][doctor];
+    }
+    // check doctor that is can access medical records
+    function getGrantedDoctors() external view returns (address[] memory) {
+        return grantedDoctors[msg.sender];
     }
 }

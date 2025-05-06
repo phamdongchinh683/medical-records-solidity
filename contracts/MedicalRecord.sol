@@ -10,14 +10,14 @@ contract MedicalRecord is UserRegistry, AccessControl, IMedicalRecord {
     using Structs for Structs.Record;
     
     mapping(address => Structs.Record[]) private records;
-
+    
     function addRecord(string memory ipfsHash) external override {
         require(isPatient[msg.sender], "Not a registered patient");
         records[msg.sender].push(Structs.Record(ipfsHash, block.timestamp));
     }
 
     function viewRecords(address patient) external view override returns (string[] memory, uint[] memory) {
-        require(checkAccess(patient, msg.sender), "You do not have access to this patient's medical records.");
+        require(checkAccess(patient, msg.sender), "Not access");
 
         uint length = records[patient].length;
         string[] memory hashes = new string[](length);
@@ -30,4 +30,6 @@ contract MedicalRecord is UserRegistry, AccessControl, IMedicalRecord {
 
         return (hashes, timestamps);
     }
+ 
+
 }

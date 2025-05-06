@@ -6,6 +6,44 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "doctor",
+						"type": "address"
+					}
+				],
+				"name": "AccessGranted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "doctor",
+						"type": "address"
+					}
+				],
+				"name": "AccessRevoked",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -37,6 +75,19 @@
 						"internalType": "bool",
 						"name": "",
 						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getGrantedDoctors",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
 					}
 				],
 				"stateMutability": "view",
@@ -173,27 +224,27 @@
 	},
 	"sources": {
 		"contracts/MedicalRecord.sol": {
-			"keccak256": "0x772a126d802d62ded4321e2aacf7572df8edf8586ce648484d9b2667c522b20f",
+			"keccak256": "0xbf80a2cd5c4275d8c6096c10b301c3c993b849dd8ff42bc211cb3a8f1c510575",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://804d5ca731ec8916b3441d01c9f1766cc9e824a6f4bb55af75117da6c6426a42",
-				"dweb:/ipfs/QmWvsAxma2p3cqmAM6jVGNeYjfKieoncRpoKQEGWuHL9fp"
+				"bzz-raw://dc3a2a7d8218d9ecb39810b4cc3cdbde87ef23766498be819d4d1d8492d12934",
+				"dweb:/ipfs/QmeCdRNt1n4r2CahfQHiLRiqzyAxuoZv4sEtaonTSzkwes"
 			]
 		},
 		"contracts/access/AccessControl.sol": {
-			"keccak256": "0xb98864f418e6f5c78477747da5bbbfa039622d87e4ded2f5d77e8ac3b84d1282",
+			"keccak256": "0x9c25bf1882e3fe9e2a33df9966816a3f6c744e9933e2e234ba888cb82e9ccbc4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3de1c34306293bf0be233d2625a144ae524bc8a6b3cb16e4e4c48e54c7210054",
-				"dweb:/ipfs/QmNnszZe6Awy412FNo2kwRcdUEAmVqZ93KmchhJt3KT6NR"
+				"bzz-raw://bff4d26dada070398ad20be70d855dc29fe5d311d9ca5df5d4cbd3a56c7ef405",
+				"dweb:/ipfs/QmRtTD5tu8AFwpbE3nCqihqAyZgPXRjVQE7rpNqRmDDKqN"
 			]
 		},
 		"contracts/interfaces/IMedicalRecord.sol": {
-			"keccak256": "0xefaa00d278533f96b05c0cedeb50d0728c72272aff613cd590343b92ad6129ba",
+			"keccak256": "0x8d26f6809d96a58d77836fda6e64f35ce97b22d22f75a4e61f05e465e1d79655",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1fa741c5939b4fced3becf35b0a33cff450e20da8fe221192e3705a644b398aa",
-				"dweb:/ipfs/QmNsBWMae5ihkj6GBiy4z6E2VdLogGUtn1K14awpG339iL"
+				"bzz-raw://0b9d0df981a2c3595fd67adca4741f3866eb63cfa52ca3a9d34f8fe3b7caf35a",
+				"dweb:/ipfs/QmbvTDifxJwMPGzFH5TaKvwqm42LzesNx3HBSqVZ3jVhze"
 			]
 		},
 		"contracts/models/Structs.sol": {
@@ -205,11 +256,11 @@
 			]
 		},
 		"contracts/users/UserRegistry.sol": {
-			"keccak256": "0xdce7dcd329b2ed460fe2e276e60830ec047e59923cf7fd374653a886f6fe2857",
+			"keccak256": "0x0aab0ba464fa6f7ebe8e4386e2374648292c68dbf0bc65a40d264d03d81c71fd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://aeb7b2082c1c75638ec03beea80cf1b466b7eeb82bdf7c3bdf54df7dce69da0c",
-				"dweb:/ipfs/QmQffkmJ5uRqQomm3bWBNCnhizkaSFwG6rKDrn4Cuh8o6n"
+				"bzz-raw://823a84a31ae5aa54c867b3a5c6dce1c6aadcdd0c59625e3c2752ae6f411eeb4d",
+				"dweb:/ipfs/QmbMryyid56mWwbLkEREKjiuutjw2CZAoAgV1LdPork4db"
 			]
 		}
 	},

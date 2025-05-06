@@ -6,12 +6,12 @@ contract UserRegistry {
     mapping(address => bool) public isDoctor;
 
     function registerAsPatient() public {
-        require(!isPatient[msg.sender], "registered");
+        require(!isPatient[msg.sender], "This account already registered");
         isPatient[msg.sender] = true;
     }
 
     function registerAsDoctor() public {
-        require(!isDoctor[msg.sender], "registered");
+        require(!isDoctor[msg.sender], "This account already registered");
         isDoctor[msg.sender] = true;
     }
 }
