@@ -16,11 +16,22 @@ contract AccessControl {
         }
     } // access permission for that doctor
 
-    function revoke(address doctor) public {
+   function revoke(address doctor) public {
+    if (access[msg.sender][doctor]) {
         access[msg.sender][doctor] = false;
-        emit AccessRevoked(msg.sender, doctor);
-    } // cancel permission for doctor
 
+        address[] storage doctors = grantedDoctors[msg.sender];
+        for (uint i = 0; i < doctors.length; i++) {
+            if (doctors[i] == doctor) {
+                doctors[i] = doctors[doctors.length - 1];
+                doctors.pop(); 
+                break;
+            }
+        }
+
+        emit AccessRevoked(msg.sender, doctor);
+    }
+}
     function checkAccess(address patient, address doctor)
         public
         view
